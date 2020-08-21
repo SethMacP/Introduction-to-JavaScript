@@ -100,27 +100,37 @@ function foodWeight (age, weight){
   if (age >= 1){
       if (weight < 6){
         foodWeight = weight * .05;
-        console.log(foodWeight)
+        console.log(foodWeight);
       }
-      else if (weight >= 6 && weight < 11){
+      else if (weight >= 6 && weight < 11) {
         foodWeight = weight * .04;
+        console.log(foodWeight);
       }
-      else if (weight 11>= && weight < 15){
+      else if (weight >= 11 && weight < 15) {
         foodWeight = weight * .03;
+        console.log(foodWeight);
       }
-      else (weight >=15){
+      else (weight >= 15) {
         foodWeight = weight *.02;
+        console.log(foodWeight);
       }
+    }
 //start of "under 1 year old" age
 //2 months (2/12) - 4 months (4/12)
-  else if (age >= (2/12) && age < (4/12)){
+  else if (age >= (2/12) && age < (4/12)) {
       foodWeight = weight * .1;
+      console.log(foodWeight);
     }
-  else if (age >= (4/12) && age < (7/12){
+//4 months (4/12) - 7 months (7/12)
+  else if (age >= (4/12) && age < (7/12) {
     foodWeight = weight * .05;
+    console.log(foodWeight);
   }
-  else if (age >= (7/12) && age < 1)
+
+//7 months (7/12) - 11.99 months (>1)
+  else if (age >= (7/12) && age < 1){
     foodWeight = weight * .04;
+    console.log(foodWeight);
   }
 }
 
@@ -139,7 +149,21 @@ function foodWeight (age, weight){
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+  let myHand = "Rock",;
+  let compChoice = 0;
   
+//Rules - Computers "choice"
+//.00 - .33 : Rock
+//.33 - .66 : Paper
+//.66 - .99 : Scissors 
+
+function rps(myHand){
+  let compChoice = math.random();
+  let myChoice = myHand.length;
+  if 
+
+}
+
   
 
 /************************************************************** Task 5 **************************************************************/
