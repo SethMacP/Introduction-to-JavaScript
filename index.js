@@ -41,14 +41,27 @@ console.log(yearChange);
 
 //Task d: Write a function to multiply a*b 
 
+let total = myFunc(2,3);
 
+function myFunc(a,b){
+  return a * b;
+}
+console.log(total)
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+let myAge = 29;
 
+let myDogAge = whatAge();
+
+function whatAge(){
+  return myAge * 7;
+}
+
+console.log(myDogAge);
 
 
 
@@ -67,6 +80,14 @@ console.log(yearChange);
 // 2 - 4 months 10% of their body weight
 // 4 - 7 months 5% of their body weight 
 // 7 - 12 months 4% of their body weight
+
+
+//variables:
+//age, weight, foodWeight
+
+//if (age >= 1){
+//	if (weight <=5) {
+//		foodWeight = weight * .05
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
