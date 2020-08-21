@@ -9,7 +9,10 @@
 let votingAge = 18;
 // all of my work was done on repl.it because I couldnt figure out how to do it in VSC.
 if (votingAge >= 18) {
-    console.log(true)
+    console.log(true);
+}
+else {
+    console.log(false);
 }
 
 
@@ -82,15 +85,49 @@ console.log(myDogAge);
 // 7 - 12 months 4% of their body weight
 
 
-//variables:
-//age, weight, foodWeight
 
-//if (age >= 1){
-//	if (weight <=5) {
-//		foodWeight = weight * .05
+
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+
+
+let age = 1;
+let weight = 15;
+
+function foodWeight (age, weight){
+//this is for 1+ years old until next comment
+  if (age >= 1){
+      if (weight < 6){
+        foodWeight = weight * .05;
+        console.log(foodWeight)
+      }
+      else if (weight >= 6 && weight < 11){
+        foodWeight = weight * .04;
+      }
+      else if (weight 11>= && weight < 15){
+        foodWeight = weight * .03;
+      }
+      else (weight >=15){
+        foodWeight = weight *.02;
+      }
+//start of "under 1 year old" age
+//2 months (2/12) - 4 months (4/12)
+  else if (age >= (2/12) && age < (4/12)){
+      foodWeight = weight * .1;
+    }
+  else if (age >= (4/12) && age < (7/12){
+    foodWeight = weight * .05;
+  }
+  else if (age >= (7/12) && age < 1)
+    foodWeight = weight * .04;
+  }
+}
+
+
+
+
+
 
 
 
