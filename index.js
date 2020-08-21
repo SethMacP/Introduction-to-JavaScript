@@ -1,24 +1,45 @@
+
+
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
 
 
 
+let votingAge = 18;
+// all of my work was done on repl.it because I couldnt figure out how to do it in VSC.
+if (votingAge >= 18) {
+    console.log(true)
+}
+
+
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let num1 = 4;
+let num2 = 3;
+
+if (num1 > num2){
+  num1 = num1 + num2;
+  console.log(num1);
+}
+else {
+  num2 = num2 - num1;
+  console.log(num2)
+}
 
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+let yearChange = "1999";
+Number(yearChange);
+console.log(yearChange);
 
 
 
 //Task d: Write a function to multiply a*b 
-
 
 
 
@@ -66,7 +87,6 @@
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
 
 
 
