@@ -196,9 +196,14 @@ function fancyTea (feet){
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
 
-
+function annoyingSong(startBottle){ 
+  let nextBottle = startBottle - 1;
+  console.log(startBottle, " bottles of soda on the wall.")
+  console.log(startBottle, " bottles of soda on the wall.")
+  console.log("Take one down pass it around " , nextBottle , " bottles of soda on the wall.")
+}
+annoyingSong(21);
 
 
 /************************************************************** Task 7 **************************************************************/
