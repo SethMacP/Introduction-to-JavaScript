@@ -7,7 +7,7 @@
 
 
 let votingAge = 18;
-// all of my work was done on repl.it because I couldnt figure out how to do it in VSC.
+// I started this assignment on repl.it and then moved to here after I solved some issues with VSC.
 if (votingAge >= 18) {
     console.log(true);
 }
@@ -134,39 +134,130 @@ console.log(foodWeight(1, 15));
 //Rules - Computers "choice"
 //.00 - .33 : Rock (4)
 //.33 - .66 : Paper(5)
-//.66 - .99 : Scissors(6) 
-
+//.66 - .99 : Scissors(6)
 
 function rps(myHand){
-  let compChoice = 0;
-  compChoice = Math.random();
+  let compChoice = Math.random();
   let myChoice = myHand.length;
-  if (myChoice ===6){
-    if (compChoice >= 0 && compChoice < .33){
-      return "Scissors does not beat Rock! You lose!"
-      }
+  if (compChoice <= .33){
+    compChoice = 4;
+    console.log(compChoice);
+    }
+    else if (compChoice <= .66){
+    compChoice = 5;
+    console.log(compChoice);
+    }
     else {
-      return "You win1!"
-      }
-    }
-  else if (myChoice ===4){
-    if (compChoice >= .33 && compChoice < .66){
-      return "Rock does not beat Paper! You lose!" 
-      }
-    else {
-      return "You win2!"
-      }
-    }
- else{
-    if (compChoice >= .66 && compChoice < 1){
-      console.log(" Paper does not beat Scissors! You lose!")
-      }
-      else {
-      console.log ("You win3!")
-    }
-  }
+    compChoice = 6;
+    console.log(compChoice);
+   }
+   if (myChoice === 4 && compChoice === 6){
+     return "You win! Rock beats Scissors."
+   }
+   else if (myChoice === 5 && compChoice === 4){
+     return "You win! Paper beats Rock."
+   }
+   else if (myChoice === 6 && compChoice === 5){
+     return "You win! Scissors beats Paper"
+   }
+   else{
+     return "You did not beat your opponent. Please try again."
+   }
 }
 console.log(rps("Rock"));
+
+
+//See my failures! :D
+
+// Bad RPS code 
+// function rps(myHand){
+//   let compChoice = Math.random;
+//   let myChoice = myHand.length;
+//   if (compChoice <= .33){
+//       compChoice = 4;
+//     }
+//     else if (compChoice <= .66){
+//       compChoice = 5;
+//     }
+//     else {
+//       compChoice = 6;
+//     }
+//   if (myChoice = 4){
+//     if (compChoice =6){
+//       return "You win - Rock beats Scissors";
+//     }
+//     else if (compChoice =4){
+//       return "Draw - Choose something original";
+//     }
+//     else {
+//       return "You lose - Paper beats Rock";
+//     }
+//   }
+//   else if (myChoice = 5){
+//     if (compChoice = 4){
+//         return "You win - Paper beats Rock";
+//     }
+//     else if (compChoice = 5){
+//       return "Draw - Choose something original";
+//     }
+//     else{
+//       return "You lose - Scissors beats Paper";
+//     }
+//   }
+//   else {
+//     if (compChoice = 5){
+//       return "You win - Scissors beats Paper";
+//     }
+//     else if (compChoice){
+//       return "Draw - Choose something original";
+//     }
+//     else{
+//       return "You lose - Rock beats Scissors";
+//     }
+//   }
+// }
+// console.log(rps("Rock"))
+
+
+// OLD RPS CODE
+
+
+
+// function rps(myHand){
+//   let compChoice = 0;
+//   compChoice = Math.random();
+//   let myChoice = myHand.length;
+//   if (myChoice ===6){
+//     if (compChoice >= 0 && compChoice < .33){
+//       return "Scissors does not beat Rock! You lose!"
+//       }
+//     else {
+//       return "You win1!"
+//       }
+//     }
+//   else if (myChoice ===4){
+//     if (compChoice >= .33 && compChoice < .66){
+//       return "Rock does not beat Paper! You lose!" 
+//       }
+//     else {
+//       return "You win2!"
+//       }
+//     }
+//  else{
+//     if (compChoice >= .66 && compChoice < 1){
+//       console.log(" Paper does not beat Scissors! You lose!")
+//       }
+//       else {
+//       console.log ("You win3!")
+//     }
+//   }
+// }
+// console.log(rps("Rock"));
+
+
+
+
+
 
 
 
@@ -214,7 +305,25 @@ annoyingSong(21);
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+
+function gradeCalc (score){
+  if (score >= 90){
+    return ("A");
+  }
+  else if (score >= 80){
+    return ("B");
+  }
+  else if (score >= 70){
+    return ("C")
+  }
+  else if (score >= 60){
+    return ("D")
+  }
+  else {
+    return ("F")
+  }
+}
+console.log(gradeCalc(81));
 
   
   
@@ -231,3 +340,43 @@ annoyingSong(21);
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+
+function getHand (){
+  let myHand = prompt("Please enter your choice for Rock, Paper, Scissors","NO");
+
+}
+
+
+
+
+
+function rps(myHand){
+  let compChoice = Math.random();
+  let myChoice = myHand.length;
+  if (compChoice <= .33){
+    compChoice = 4;
+    console.log(compChoice);
+    }
+    else if (compChoice <= .66){
+    compChoice = 5;
+    console.log(compChoice);
+    }
+    else {
+    compChoice = 6;
+    console.log(compChoice);
+   }
+   if (myChoice === 4 && compChoice === 6){
+     return "You win! Rock beats Scissors."
+   }
+   else if (myChoice === 5 && compChoice === 4){
+     return "You win! Paper beats Rock."
+   }
+   else if (myChoice === 6 && compChoice === 5){
+     return "You win! Scissors beats Paper"
+   }
+   else{
+     return "You did not beat your opponent. Please try again."
+   }
+}
+console.log( "You chose: " + getHand());
+console.log( getHand() + rps() );
