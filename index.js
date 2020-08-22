@@ -44,27 +44,23 @@ console.log(yearChange);
 
 //Task d: Write a function to multiply a*b 
 
-let total = myFunc(2,3);
-
 function myFunc(a,b){
   return a * b;
 }
-console.log(total)
+console.log(myFunc(2,3));
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-let myAge = 29;
 
-let myDogAge = whatAge();
 
-function whatAge(){
+function whatAge(myAge){
   return myAge * 7;
 }
 
-console.log(myDogAge);
+console.log(whatAge(29));
 
 
 
@@ -90,51 +86,36 @@ console.log(myDogAge);
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-
-
-let age = 1;
-let weight = 15;
-
 function foodWeight (age, weight){
 //this is for 1+ years old until next comment
   if (age >= 1){
       if (weight < 6){
-        foodWeight = weight * .05;
-        console.log(foodWeight);
+        return (weight * .05);
       }
       else if (weight >= 6 && weight < 11) {
-        foodWeight = weight * .04;
-        console.log(foodWeight);
+        return (weight * .04);
       }
-      else if (weight >= 11 && weight < 15) {
-        foodWeight = weight * .03;
-        console.log(foodWeight);
+      else if (weight >= 11 && weight <= 15) {
+        return (weight * .03);
       }
-      else (weight >= 15) {
-        foodWeight = weight *.02;
-        console.log(foodWeight);
+      else{
+        return (weight * .05);
       }
-    
-//start of "under 1 year old" age
-//2 months (2/12) - 4 months (4/12)
-  else if (age >= (2/12) && age < (4/12)) {
-      foodWeight = weight * .1;
-      console.log(foodWeight);
     }
-//4 months (4/12) - 7 months (7/12)
-  else if (age >= (4/12) && age < (7/12){
-    foodWeight = weight * .05;
-    console.log(foodWeight);
+  else{
+      if (age < (4/12)) {     
+        return (weight * .1);
+      }
+      else if (age < (7/12)){
+        return (weight * .05);
+      }
+      else{
+        return (weight * .04);
+      }
+    }
   }
 
-//7 months (7/12) - 11.99 months (>1)
-  else if (age >= (7/12) && age < 1){
-    foodWeight = weight * .04;
-    console.log(foodWeight);
-  }
-} //this one closes the function
-
-
+console.log(foodWeight(1, 15));
 
 
 
@@ -149,24 +130,45 @@ function foodWeight (age, weight){
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  let myHand = "Rock",;
-  let compChoice = 0;
-  let scoreboard = 0;
   
 //Rules - Computers "choice"
-//.00 - .33 : Rock
-//.33 - .66 : Paper
-//.66 - .99 : Scissors 
+//.00 - .33 : Rock (4)
+//.33 - .66 : Paper(5)
+//.66 - .99 : Scissors(6) 
+
 
 function rps(myHand){
-  let compChoice = math.random();
+  let compChoice = 0;
+  compChoice = Math.random();
   let myChoice = myHand.length;
-  if (compChoice >= 0 && compChoice < .33)
-    scoreboard = myChoice - compChoice;
-    console.log(myChoice);
-    
-
+  if (myChoice ===6){
+    if (compChoice >= 0 && compChoice < .33){
+      return "Scissors does not beat Rock! You lose!"
+      }
+    else {
+      return "You win1!"
+      }
+    }
+  else if (myChoice ===4){
+    if (compChoice >= .33 && compChoice < .66){
+      return "Rock does not beat Paper! You lose!" 
+      }
+    else {
+      return "You win2!"
+      }
+    }
+ else{
+    if (compChoice >= .66 && compChoice < 1){
+      console.log(" Paper does not beat Scissors! You lose!")
+      }
+      else {
+      console.log ("You win3!")
+    }
+  }
 }
+console.log(rps("Rock"));
+
+
 
   
 
