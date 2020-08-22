@@ -175,13 +175,20 @@ console.log(rps("Rock"));
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
+function mericanize (kM){
+ return ( kM * 0.621371 );
+}
+console.log(mericanize(300));
+//186.4113 is correct for 300
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+function fancyTea (feet){
+  return ( feet * 30.48 );
+ }
+ console.log(fancyTea(300));
+ //9144 is correct for 300
 
 
 
@@ -196,7 +203,7 @@ console.log(rps("Rock"));
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
-//write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
+//write a javaScript program that takes `a mark out of 100 and returns a corisponding letter grade 
 //90s should be A 
 //80s should be B 
 //70s should be Cs 
