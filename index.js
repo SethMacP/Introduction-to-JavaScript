@@ -114,7 +114,7 @@ function foodWeight (age, weight){
         foodWeight = weight *.02;
         console.log(foodWeight);
       }
-    }
+    
 //start of "under 1 year old" age
 //2 months (2/12) - 4 months (4/12)
   else if (age >= (2/12) && age < (4/12)) {
@@ -122,7 +122,7 @@ function foodWeight (age, weight){
       console.log(foodWeight);
     }
 //4 months (4/12) - 7 months (7/12)
-  else if (age >= (4/12) && age < (7/12) {
+  else if (age >= (4/12) && age < (7/12){
     foodWeight = weight * .05;
     console.log(foodWeight);
   }
@@ -132,7 +132,7 @@ function foodWeight (age, weight){
     foodWeight = weight * .04;
     console.log(foodWeight);
   }
-}
+} //this one closes the function
 
 
 
@@ -151,6 +151,7 @@ function foodWeight (age, weight){
 
   let myHand = "Rock",;
   let compChoice = 0;
+  let scoreboard = 0;
   
 //Rules - Computers "choice"
 //.00 - .33 : Rock
@@ -160,7 +161,10 @@ function foodWeight (age, weight){
 function rps(myHand){
   let compChoice = math.random();
   let myChoice = myHand.length;
-  if 
+  if (compChoice >= 0 && compChoice < .33)
+    scoreboard = myChoice - compChoice;
+    console.log(myChoice);
+    
 
 }
 
@@ -213,8 +217,3 @@ function rps(myHand){
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
-
